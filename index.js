@@ -94,6 +94,25 @@ const questions = [
             }
         }
     },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Please provide an email address for others to reach you with questions.',
+        when: ({ contents }) => {
+            if (contents.indexOf('Questions') > -1) {
+                return true;
+            } else { 
+                return false;
+            }
+        },
+        validate: questionsInput => {
+            if (questionsInput) {
+                return true;
+            } else {
+                console.log('Please provide an email address!');
+                return false;
+            }
+        }
 ];
 
 // function to write README file
