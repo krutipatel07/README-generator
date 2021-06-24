@@ -17,6 +17,49 @@ const questions = [
             }
         }
     },
+    {
+        type: 'checkbox',
+        name: 'contents',
+        message: 'Any additional sections you would like to include in your README?',
+        choices: [
+            {
+                name: 'Deployed Application',
+                checked: false
+            },
+            {
+                name: 'Installation',
+                checked: false
+            },
+            {
+                name: 'Screenshots',
+                checked: true
+            },
+            {
+                name: 'Built With',
+                checked: true
+            },
+            {
+                name: 'License',
+                checked: false
+            },
+            {
+                name: 'Contributing',
+                checked: false
+            },
+            {
+                name: 'Tests',
+                checked: false
+            },
+            {
+                name: 'Questions',
+                checked: true
+            },
+            {
+                name: 'Credits',
+                checked: true
+            },
+        ]
+    },
 ];
 
 // function to write README file
