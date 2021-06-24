@@ -53,6 +53,24 @@ const createTableOfContents = contentsArr => {
   });
   return contentsList;
 };
+// creates table of contents
+const createTableOfContents = contentsArr => {
+
+  // creates contents list items based on user selection
+  let contentsList = '';
+  contentsArr.forEach((item) => {
+
+      // indents 'Screenshots' list item
+      if (item.content && item.header === 'Screenshots') {
+      contentsList += `   * [${item.header}](#${(item.header).toLowerCase()})
+`;
+      } else if (item.content) {
+          contentsList += `* [${item.header}](#${(item.header).toLowerCase().split(' ').join('-')})
+`;
+      }
+  });
+  return contentsList;
+};
 
 // function to generate markdown for README
 function generateMarkdown(data) {

@@ -82,6 +82,18 @@ const questions = [
             }
         }
     }, 
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'Please enter the name of your repo.  (Required)',
+        validate: repoInput => {
+            if (repoInput) {
+                return true;
+            } else {
+                console.log('Please enter the name of your repo!')
+            }
+        }
+    },
 ];
 
 // function to write README file
