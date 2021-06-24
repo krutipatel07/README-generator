@@ -1,27 +1,22 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "README generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "kruti",
-  "license": "(MIT)",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "inquirer": "^6.5.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krutipatel07/README-generator.git"
+    "url": "git+https://github.com/deckiedevs/readme-generator.git"
   },
-  "keywords": [
-    "node",
-    "inquirer"
-  ],
   "bugs": {
-    "url": "https://github.com/krutipatel07/README-generator/issues"
+    "url": "https://github.com/deckiedevs/readme-generator/issues"
   },
-  "homepage": "https://github.com/krutipatel07/README-generator#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/deckiedevs/readme-generator#readme",
+  "description": ""
 }
