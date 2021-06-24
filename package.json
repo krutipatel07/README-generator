@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/krutipatel07/README-generator/issues"
   },
-  "homepage": "https://github.com/krutipatel07/README-generator#readme"
+  "homepage": "https://github.com/krutipatel07/README-generator#readme",
+  "devDependencies": {}
 }

@@ -97,7 +97,11 @@ const createLicense = license => {
 
 const createTest = test => {
     if (test) {
-        return '${test}'
+        return `To run tests on the application, install
+\`\`\`
+${test}
+\`\`\`
+and run \`npm run test\` from the command line.`
     } else {
         return '';
     };

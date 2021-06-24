@@ -19,6 +19,31 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'github',
+        message: 'Please enter your GitHub username. (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'Please enter the name of your repo.  (Required)',
+        validate: repoInput => {
+            if (repoInput) {
+                return true;
+            } else {
+                console.log('Please enter the name of your repo!')
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'description',
         message: 'Provide a description of your application.  (Required)',
         validate: descInput => {
@@ -40,31 +65,6 @@ const questions = [
             } else {
                 console.log('Please provide information for using your application!');
                 return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'Please enter your GitHub username. (Required)',
-        validate: githubInput => {
-            if (githubInput) {
-                return true;
-            } else {
-                console.log('Please enter your GitHub username!');
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'repo',
-        message: 'Please enter the name of your repo.  (Required)',
-        validate: repoInput => {
-            if (repoInput) {
-                return true;
-            } else {
-                console.log('Please enter the name of your repo!')
             }
         }
     },
@@ -177,7 +177,7 @@ const questions = [
         type: 'checkbox',
         name: 'built with',
         message: 'Please select the technologies that your application was built with.',
-        choices: ['JavaScript', 'HTML', 'SASS', 'CSS', 'Node.js', 'Express.js'],
+        choices: ['HTML', 'CSS', 'SASS', 'JavaScript', 'Node.js', 'Express.js'],
         default: 0,
         when: ({ contents }) => {
             if (contents.indexOf('Built With') > -1) {
