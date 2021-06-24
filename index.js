@@ -30,7 +30,31 @@ const questions = [
             }
         }
     },
-    
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'Please enter the name of your repo.  (Required)',
+        validate: repoInput => {
+            if (repoInput) {
+                return true;
+            } else {
+                console.log('Please enter the name of your repo!')
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description of your application.  (Required)',
+        validate: descInput => {
+            if (descInput) {
+                return true;
+            } else {
+                console.log('Please enter a description!');
+                return false;
+            }
+        }
+    },
     {
         type: 'input',
         name: 'usage',

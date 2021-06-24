@@ -186,5 +186,23 @@ ${sectionItem.content}
   
 `;
       }
+  });
+
+  return `# ${title}
+[![Issues](https://img.shields.io/github/issues/${github}/${
+  repo
+})](https://github.com/${github}/${
+  repo
+}/issues) [![Issues](https://img.shields.io/github/contributors/${
+  github
+}/${repo})](https://github.com/${github}/${
+  repo
+}/graphs/contributors) ${addLicenseBadge(license)}
+## Description
+${createDescription(title, data.description, data.link)}
+## Contents
+${createTableOfContents(sectionArr)}
+${readmeContents}`;
+}
 
 module.exports = generateMarkdown;
