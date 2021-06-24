@@ -60,6 +60,28 @@ const questions = [
             },
         ]
     },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Please provide license information.',
+        choices: ['MIT', 'GNU', 'Apache 2.0', 'ISC'],
+        default: 0,
+        when: ({ contents }) => {
+            if (contents.indexOf('License') > -1) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        validate: licenseInput => {
+            if (licenseInput) {
+                return true;
+            } else {
+                console.log('Please provide license information!');
+                return false;
+            }
+        }
+    }, 
 ];
 
 // function to write README file
