@@ -8,8 +8,11 @@ A Node.js application that will generate a professional README file.
 * [Installation](#Installation)
 * [Usage](#Usage)
     * [Demo](#Demo)
+* [Contributting](#Contributting)
+* [Tests](#Tests)
 * [Questions](#Questions)
 * [Credits](#Credits)
+* [License](#License)
 
 ## Installation
 To use this application, please install: 
